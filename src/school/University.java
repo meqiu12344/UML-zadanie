@@ -13,11 +13,29 @@ public class University {
     }
 
     public Student getStudent(String name, String sureName){
-        return students.get(1);
+        int id = 0;
+        for(Student ele: students){
+            if(ele.getName().equals(name) && ele.getSurname().equals(sureName)){
+                return students.get(id);
+            }
+
+            id++;
+        }
+
+        return null;
     }
 
     public boolean removeStudent(String name, String sureName){
-        students.remove(0);
+        int id = 0;
+        for(Student ele: students){
+            if(ele.getName().equals(name) && ele.getSurname().equals(sureName)){
+                break;
+            }
+
+            id++;
+        }
+
+        students.remove(id);
         return true;
     }
 }

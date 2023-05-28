@@ -13,9 +13,11 @@ public class Main {
 
         university.addStudent();
 
-        System.out.println(university.getStudent("Mateusz", "Maniak").toString());
-        university.removeStudent("Mateusz", "Maniak");
+        System.out.println(university.getStudent("Mateusz1", "Maniak1"));
+        university.removeStudent("Mateusz1", "Maniak1");
 
         System.out.println("Good student: " + student.isGoodStudent());
+
+        System.out.println(university.getStudent("Mateusz", "Maniak"));
     }
 }
